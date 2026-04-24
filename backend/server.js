@@ -28,7 +28,7 @@ app.get('/api', (req, res) => {
 });
 
 // Any other requests that don't match '/api' will be served the React frontend
-app.get('(.*)', (req, res) => {
+app.get('/*splat', (req, res) => {
   res.sendFile(path.join(process.cwd(), '../frontend/dist', 'index.html'));
 });
 
