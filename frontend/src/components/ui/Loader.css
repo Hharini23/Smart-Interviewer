@@ -1,0 +1,50 @@
+.loader-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 3rem;
+}
+
+.loader {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.loader-circle {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--primary);
+  animation: bounce 0.6s infinite alternate;
+}
+
+.loader-circle:nth-child(2) {
+  background: var(--accent);
+  animation-delay: 0.2s;
+}
+
+.loader-circle:nth-child(3) {
+  background: var(--success);
+  animation-delay: 0.4s;
+}
+
+@keyframes bounce {
+  to {
+    transform: translateY(-12px);
+    opacity: 0.7;
+  }
+}
+
+.loader-text {
+  font-weight: 600;
+  font-size: 1.1rem;
+  letter-spacing: 0.5px;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
